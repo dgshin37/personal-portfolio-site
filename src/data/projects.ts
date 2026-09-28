@@ -57,7 +57,7 @@ export const projects: Project[] = [
     category: 'Local AI & developer tools', status: 'Personal tool',
     description: [
       'Press a key, speak naturally, and cleaned-up text appears wherever you’re typing. Voxsofia pairs Apple’s on-device speech recognition with a local Gemma 4 model and custom vocabulary for names and technical terms. I built it over a weekend with AI coding assistance and use it for my own dictation.',
-      'In my daily use, I haven’t found its transcription quality noticeably worse than Wispr Flow’s. The tradeoff: roughly 7 GB of model memory and somewhat slower processing in exchange for offline operation, on-device privacy, and no subscription or paid inference API.',
+      'In my daily use, its transcription quality is at least as good as Wispr Flow’s. The tradeoff: roughly 7 GB of model memory and somewhat slower processing in exchange for offline operation, on-device privacy, and no subscription or paid inference API.',
     ],
     tags: ['SwiftUI', 'Apple Speech', 'MLX Swift · Gemma', 'Model evaluation'], links: [],
     detailLabel: 'The pipeline, experiments & tradeoffs',
