@@ -27,14 +27,14 @@ export const projects: Project[] = [
     detailLabel: 'About the work', details: [],
   },
   {
-    id: 'crossflame', name: 'Crossflame', subtitle: 'Training AI for competitive arena play.',
-    category: 'Reinforcement learning & game AI', status: 'Independent project',
+    id: 'crossflame', name: 'Crossflame', subtitle: 'A competitive arena game with self-play AI.',
+    category: 'Game engineering & reinforcement learning', status: 'Independent project',
     period: '2026',
     description: [
-      'A reinforcement-learning project focused on training AI opponents for real-time, competitive 1v1 play. I trained recurrent neural networks using PPO and self-play against a league of historical opponents, with targeted training drills reconstructed from losses to human players.',
-      'The work spans neural architecture, training design, evaluation, and deploying the learned policies directly in the browser. To support it, I built a deterministic Rust environment that recreates the mechanics and feel of Power Bomberman duels and serves both batched training and human play.',
+      'A competitive 1v1 arena game built around responsive movement, precise timing, and the mechanics of full-power Power Bomberman duels. I engineered a deterministic Rust simulation shared by browser play and batched training, with rollback multiplayer and versioned replays. Recreating the game’s feel involved measuring gameplay recordings and carefully refining movement, cornering, and bomb interactions.',
+      'For the AI, I designed and trained recurrent neural networks using PPO and self-play against a league of historical opponents, including targeted training drills reconstructed from losses to human players. The work spans neural architecture, training design, and evaluation, through to deploying the learned opponents directly in the browser.',
     ],
-    tags: ['PyTorch · recurrent PPO', 'Self-play', 'ONNX', 'Rust · WebAssembly'],
+    tags: ['Rust · WebAssembly', 'PyTorch · recurrent PPO', 'Self-play', 'ONNX', 'Rollback multiplayer'],
     links: [{ label: 'Play Crossflame', href: 'https://crossflame.net' }],
     detailLabel: 'Inside the game & the AI',
     details: [
