@@ -31,7 +31,7 @@ export const projects: Project[] = [
     category: 'Game engineering & reinforcement learning', status: 'Independent project',
     period: '2026',
     description: [
-      'A competitive 1v1 arena game built around responsive movement, precise timing, and the mechanics of full-power Power Bomberman duels. I engineered a deterministic Rust simulation shared by browser play and batched training, with rollback multiplayer and versioned replays. Recreating the game’s feel involved measuring gameplay recordings and carefully refining movement, cornering, and bomb interactions.',
+      'A competitive 1v1 arena game combining carefully tuned gameplay with a high-performance Rust engine. I designed and engineered the experience end to end, from responsive controls and precise game mechanics to deterministic simulation, real-time multiplayer, and replay systems.',
       'For the AI, I designed and trained recurrent neural networks using PPO and self-play against a league of historical opponents, including targeted training drills reconstructed from losses to human players. The work spans neural architecture, training design, and evaluation, through to deploying the learned opponents directly in the browser.',
     ],
     tags: ['Rust · WebAssembly', 'PyTorch · recurrent PPO', 'Self-play', 'ONNX', 'Rollback multiplayer'],
