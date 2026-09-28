@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <main>
+    <p class="domain">donggil.dev</p>
+    <div>
+      <h1>Donggil Shin</h1>
+      <p class="role">Product engineering &amp; applied AI.</p>
+      <p class="status">Portfolio coming soon.</p>
+      <a href="https://github.com/dgshin37">Find me on GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+    <p class="footer">Building things that matter to me.</p>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    max-width: 74rem;
+    min-height: 100svh;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 5vw, 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+  .domain { font-size: 0.95rem; font-weight: 600; }
+  h1 { font-size: clamp(3.3rem, 10vw, 7rem); letter-spacing: -0.065em; line-height: 1.05; margin: 0 0 1.3rem; }
+  .role { font-size: clamp(1.15rem, 3vw, 1.7rem); line-height: 1.5; }
+  .status { margin: 2rem 0 0.8rem; color: #56645e; }
+  .footer { font-size: 0.85rem; color: #56645e; }
+</style>
