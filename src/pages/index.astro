@@ -37,7 +37,7 @@ import { projects } from '../data/projects';
         <div class="projects">
           {projects.map((project, i) => (
             <article id={project.id} class="project" aria-labelledby={`${project.id}-title`}>
-              <div class="project-meta"><span class="eyebrow">0{i + 1} / {project.category}</span><span class="project-status">{project.status}</span></div>
+              <div class="project-meta"><span class="eyebrow">0{i + 1} / {project.category}</span><div class="project-context"><span class="project-period">{project.period}</span><span class="project-status">{project.status}</span></div></div>
               <h2 id={`${project.id}-title`}>{project.name}<span class="title-period">.</span></h2>
               <p class="subtitle">{project.subtitle}</p>
               <div class="project-description">{project.description.map((paragraph) => <p>{paragraph}</p>)}</div>
@@ -101,6 +101,8 @@ import { projects } from '../data/projects';
   .project + .project { border-top: 1px solid var(--line); padding-top: 3.5rem; }
   .project-meta { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
   .project-meta .eyebrow { font-size: .61rem; color: var(--muted); }
+  .project-context { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+  .project-period { color: var(--muted); font-size: .65rem; font-variant-numeric: tabular-nums; }
   .project-status { font-size: .65rem; border: 1px solid #cfd7c6; background: #edf0e7; border-radius: 1rem; padding: .3rem .65rem; }
   h2 { font-weight: 550; letter-spacing: -.055em; line-height: 1.15; }
   .project h2 { font-size: clamp(2.4rem, 4.4vw, 3.65rem); margin-bottom: .6rem; }

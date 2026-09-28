@@ -4,6 +4,7 @@ export interface Project {
   subtitle: string;
   category: string;
   status: string;
+  period: string;
   description: string[];
   tags: string[];
   links: { label: string; href: string }[];
@@ -15,6 +16,7 @@ export const projects: Project[] = [
   {
     id: 'melosofia', name: 'Melosofia', subtitle: 'Knowledge, set to music.',
     category: 'Learning & product engineering', status: 'Founder & Product Engineer',
+    period: '2025–present',
     description: [
       'A learning platform that brings together original music and interactive study to make complex subjects more engaging and approachable.',
       'I design and build the product and the systems behind it, spanning full-stack engineering, AI orchestration, and multimodal learning design. The work connects AI models, structured educational content, and the learning experience, combining AI-assisted workflows with human review.',
@@ -27,6 +29,7 @@ export const projects: Project[] = [
   {
     id: 'crossflame', name: 'Crossflame', subtitle: 'A competitive arena. An opponent that learns.',
     category: 'Game engineering & reinforcement learning', status: 'Independent project',
+    period: '2026',
     description: [
       'A browser-based 1v1 Bomberman-style game, built to recreate the competitive feel of Power Bomberman, with neural opponents trained through self-play.',
       'A deterministic Rust simulation underpins browser play, rollback multiplayer, versioned replays, and batched training. The AI runs directly in the browser; one major policy family uses an approximately 8-million-parameter recurrent network.',
@@ -46,6 +49,7 @@ export const projects: Project[] = [
   {
     id: 'salsasofia', name: 'Salsasofia', subtitle: 'Salsa as a graph.',
     category: 'Dance & interactive visualization', status: 'Prototype / in development',
+    period: '2026',
     description: [
       'What if every position in partner dancing were a node, and every move an edge? Salsasofia explores salsa as a graph of positions and transitions, making it possible to reason about how moves connect and discover new combinations.',
       'The work brings together structured dance notation and a procedural 3D partner-animation prototype. These are the building blocks of the learning experience I’m developing.',
@@ -55,6 +59,7 @@ export const projects: Project[] = [
   {
     id: 'voxsofia', name: 'Voxsofia', subtitle: 'A weekend-built, on-device dictation tool.',
     category: 'Local AI & developer tools', status: 'Personal tool',
+    period: '2026',
     description: [
       'Press a key, speak naturally, and cleaned-up text appears wherever you’re typing. Voxsofia pairs Apple’s on-device speech recognition with a local Gemma 4 model and custom vocabulary for names and technical terms. I built it over a weekend with AI coding assistance and use it for my own dictation.',
       'In my daily use, its transcription quality is at least as good as Wispr Flow’s. The tradeoff: roughly 7 GB of model memory and somewhat slower processing in exchange for offline operation, on-device privacy, and no subscription or paid inference API.',
