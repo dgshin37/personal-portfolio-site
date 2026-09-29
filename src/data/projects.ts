@@ -32,7 +32,7 @@ export const projects: Project[] = [
     category: 'Game engineering & reinforcement learning', status: 'Independent project',
     period: '2026',
     description: [
-      'A competitive 1v1 arena game combining carefully tuned gameplay with a high-performance Rust engine. I designed and engineered the experience end to end, from responsive controls and precise game mechanics to deterministic simulation, real-time multiplayer, and replay systems.',
+      'A competitive 1v1 Bomberman game that faithfully recreates the mechanics and feel of Power Bomberman duels, built on a high-performance Rust engine. I designed and engineered the experience end to end, from responsive controls and carefully tuned gameplay to deterministic simulation, real-time multiplayer, and replay systems.',
       'For the AI, I designed and trained recurrent neural networks using PPO and self-play against a league of historical opponents, including targeted training drills reconstructed from losses to human players. The work spans neural architecture, training design, and evaluation, through to deploying the learned opponents directly in the browser.',
       'The current AI can already beat high-level human players, though not consistently. I’m developing a new generation of models to address behavioral quirks and improve playing strength, with the goal of consistently beating the highest-level human players.',
     ],
