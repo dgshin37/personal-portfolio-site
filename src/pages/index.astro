@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { projects } from '../data/projects';
+const selectedProjects = projects.filter((project) => !project.mini);
+const miniProjects = projects.filter((project) => project.mini);
 ---
 
 <BaseLayout>
@@ -26,16 +28,17 @@ import { projects } from '../data/projects';
       </section>
       <div class="work-layout" id="work">
         <aside class="work-index" aria-label="Project index">
-          <p class="eyebrow">Selected work <span class="count">04</span></p>
+          <p class="eyebrow">Selected work <span class="count">{String(selectedProjects.length).padStart(2, '0')}</span></p>
           <nav aria-label="Projects">
-            {projects.map((project, i) => (
+            {selectedProjects.map((project, i) => (
               <a href={`#${project.id}`}><span class="index-number">0{i + 1}</span>{project.name}<span class="index-arrow" aria-hidden="true">↗</span></a>
             ))}
+            <a href="#mini-projects"><span class="index-number">+</span>Mini-projects<span class="index-arrow" aria-hidden="true">↗</span></a>
           </nav>
           <p class="index-note">Products, experiments,<br />and things I wanted to exist.</p>
         </aside>
         <div class="projects">
-          {projects.map((project, i) => (
+          {selectedProjects.map((project, i) => (
             <article id={project.id} class="project" aria-labelledby={`${project.id}-title`}>
               <div class="project-meta"><span class="eyebrow">0{i + 1} / {project.category}</span><div class="project-context"><span class="project-period">{project.period}</span><span class="project-status">{project.status}</span></div></div>
               <h2 id={`${project.id}-title`}>{project.name}<span class="title-period">.</span></h2>
@@ -51,6 +54,21 @@ import { projects } from '../data/projects';
               </details>}
             </article>
           ))}
+          <details class="mini-projects" id="mini-projects">
+            <summary><span><span class="mini-title">Mini-projects</span><span class="mini-description">Smaller tools & experiments · {miniProjects.map((project) => project.name).join(', ')}</span></span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="mini-content">
+              {miniProjects.map((project) => (
+                <article id={project.id} class="project mini-project" aria-labelledby={`${project.id}-title`}>
+                  <div class="project-meta"><span class="eyebrow">{project.category}</span><div class="project-context"><span class="project-period">{project.period}</span><span class="project-status">{project.status}</span></div></div>
+                  <h2 id={`${project.id}-title`}>{project.name}<span class="title-period">.</span></h2>
+                  <p class="subtitle">{project.subtitle}</p>
+                  <div class="project-description">{project.description.map((paragraph) => <p>{paragraph}</p>)}</div>
+                  <ul class="tags" aria-label={`${project.name} skills`}>{project.tags.map((tag) => <li>{tag}</li>)}</ul>
+                  <div class="case-study-content mini-case-study">{project.details.map((detail) => <section><h3>{detail.title}</h3><p>{detail.text}</p></section>)}</div>
+                </article>
+              ))}
+            </div>
+          </details>
         </div>
       </div>
       <section class="about" id="about" aria-labelledby="about-title">
@@ -125,7 +143,15 @@ import { projects } from '../data/projects';
   .expand-icon::before, .expand-icon::after { content: ''; position: absolute; background: currentColor; }
   .expand-icon::before { left: 0; right: 0; height: 1px; top: 50%; }
   .expand-icon::after { top: 0; bottom: 0; width: 1px; left: 50%; }
-  details[open] .expand-icon::after { display: none; }
+  details[open] > summary .expand-icon::after { display: none; }
+  .mini-projects { border-top: 1px solid var(--line); margin-bottom: 3.5rem; scroll-margin-top: 2rem; }
+  .mini-projects > summary { padding: 1.7rem 0; }
+  .mini-title { display: block; font-size: 1.15rem; font-weight: 550; letter-spacing: -.02em; }
+  .mini-description { display: block; font-size: .73rem; font-weight: 400; color: var(--muted); margin-top: .4rem; line-height: 1.6; }
+  .mini-content { border-top: 1px solid var(--line); padding-top: 2rem; }
+  .mini-project { padding-bottom: 0; }
+  .mini-project h2 { font-size: clamp(1.8rem, 3vw, 2.3rem); }
+  .mini-case-study { margin-top: 1.8rem; }
   .case-study-content { padding: .6rem 0 1rem; }
   .case-study-content section { margin-bottom: 1.5rem; }
   .case-study-content h3 { font-size: .88rem; margin-bottom: .5rem; font-weight: 650; }

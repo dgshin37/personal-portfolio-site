@@ -5,6 +5,7 @@ export interface Project {
   category: string;
   status: string;
   period: string;
+  mini?: boolean;
   description: string[];
   tags: string[];
   links: { label: string; href: string }[];
@@ -57,8 +58,19 @@ export const projects: Project[] = [
     tags: ['Graph modeling', 'Three.js', 'Procedural animation'], links: [], detailLabel: 'About the work', details: [],
   },
   {
+    id: 'selasofia', name: 'Selasofia', subtitle: 'A desk lamp with a little life of its own.',
+    category: 'Robotics & expressive interaction', status: 'Work in progress',
+    period: '2026',
+    description: [
+      'An expressive robotic desk lamp designed to communicate through movement, posture, and light. I’m exploring how a useful everyday object can feel attentive and alive through carefully choreographed nonverbal interaction.',
+      'The work so far spans parametric mechanical design, a six-degree-of-freedom articulated rig, and a layered motion engine that blends poses, expressive gestures, and subtle idle movement. Simulation tools and servo-control backends connect the digital design to the physical prototype workflow; perception-driven interaction is a planned next layer.',
+    ],
+    tags: ['Python', 'Parametric CAD · build123d', 'Kinematics', 'Motion control'],
+    links: [], detailLabel: 'About the work', details: [],
+  },
+  {
     id: 'voxsofia', name: 'Voxsofia', subtitle: 'A weekend-built, on-device dictation tool.',
-    category: 'Local AI & developer tools', status: 'Personal tool',
+    category: 'Local AI & developer tools', status: 'Personal tool', mini: true,
     period: '2026',
     description: [
       'Press a key, speak naturally, and cleaned-up text appears wherever you’re typing. Voxsofia pairs Apple’s on-device speech recognition with a local Gemma 4 model and custom vocabulary for names and technical terms. I built it over a weekend with AI coding assistance and use it for my own dictation.',
