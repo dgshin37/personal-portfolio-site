@@ -34,6 +34,7 @@ export const projects: Project[] = [
     description: [
       'A competitive 1v1 arena game combining carefully tuned gameplay with a high-performance Rust engine. I designed and engineered the experience end to end, from responsive controls and precise game mechanics to deterministic simulation, real-time multiplayer, and replay systems.',
       'For the AI, I designed and trained recurrent neural networks using PPO and self-play against a league of historical opponents, including targeted training drills reconstructed from losses to human players. The work spans neural architecture, training design, and evaluation, through to deploying the learned opponents directly in the browser.',
+      'The current AI can already beat high-level human players, though not consistently. I’m developing a new generation of models to address behavioral quirks and improve playing strength, with the goal of consistently beating the highest-level human players.',
     ],
     tags: ['Rust · WebAssembly', 'PyTorch · recurrent PPO', 'Self-play', 'ONNX', 'Rollback multiplayer'],
     links: [{ label: 'Play Crossflame', href: 'https://crossflame.net' }],
