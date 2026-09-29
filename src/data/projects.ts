@@ -24,7 +24,7 @@ export const projects: Project[] = [
       'The goal is to make studying something students look forward to.',
     ],
     tags: ['Product design', 'Full-stack engineering', 'AI orchestration'],
-    links: [{ label: 'Explore Melosofia', href: 'https://melosofia.com' }, { label: 'Open the app', href: 'https://app.melosofia.com' }],
+    links: [{ label: 'Explore Melosofia', href: 'https://melosofia.com' }],
     detailLabel: 'About the work', details: [],
   },
   {
