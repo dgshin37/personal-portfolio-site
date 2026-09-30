@@ -1,6 +1,6 @@
 # donggil.dev
 
-Personal portfolio built with Astro and hosted on GitHub Pages.
+Personal portfolio built with Astro.
 
 ## Development
 
@@ -18,4 +18,4 @@ npm run build
 npm run preview
 ```
 
-Pushes to `main` deploy through GitHub Actions. The custom domain is `donggil.dev`.
+Publishing is currently paused; automatic deployment is disabled.
